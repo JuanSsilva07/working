@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 800;
+    background: #06181f;
+    padding: 200px;
+}
+.container{
+    position: relative;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .icon{
+    width: 200px;
+}
+.container .icon path{
+    fill: transparent;
+    stroke-width: 5;
+    stroke: #31e8ff;
+}
+.container .icon.solarsystem path{
+    stroke-dasharray: 2895;
+    stroke-dashoffset: 0;
+}
+.container .icon.solarsystem:hover path{
+    animation: animate-solarsystem 2s linear forwards;
+}
+@keyframes animate-solarsystem
+{
+    0%
+    {
+        stroke-dashoffset: 0;
+    }
+    40%
+    {
+        stroke-dashoffset: 2895;
+    }
+    80%
+    {
+        stroke-dashoffset: 5790;
+        fill: transparent;
+    }
+    100%
+    {
+        stroke-dashoffset: 5790;
+        fill: #31e8ff;
+    }   
+}
+
+.container .icon.moon path{
+    stroke-dasharray: 2895;
+    stroke-dashoffset: 0;
+}
+.container .icon.moon:hover path{
+    animation: animate-moon 2s linear forwards;
+}
+@keyframes animate-moon
+{
+    0%
+    {
+        stroke-dashoffset: 0;
+    }
+    40%
+    {
+        stroke-dashoffset: 2895;
+    }
+    80%
+    {
+        stroke-dashoffset: 5790;
+        fill: transparent;
+    }
+    100%
+    {
+        stroke-dashoffset: 5790;
+        fill: #31e8ff;
+    }   
+}
+.container .icon.planet path{
+    stroke-dasharray: 2895;
+    stroke-dashoffset: 0;
+}
+.container .icon.planet:hover path{
+    animation: animate-solarsystem 2s linear forwards;
+}
+@keyframes animate-planet
+{
+    0%
+    {
+        stroke-dashoffset: 0;
+    }
+    40%
+    {
+        stroke-dashoffset: 2895;
+    }
+    80%
+    {
+        stroke-dashoffset: 5790;
+        fill: transparent;
+    }
+    100%
+    {
+        stroke-dashoffset: 5790;
+        fill: #31e8ff;
+    }   
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.5D Parallax</title>
+    <link rel="stylesheet" href="css/2.5DParallax.css">
+</head>
+<body>
+    <section>
+        <div id="fundo"></div>
+        <h2>2.5D Efeito Parallax</h2>
+        <img src="imagens/Balanço.png" alt="Garota no Balanço" class="garota">
+    </section>
+
+    <script type="text/javascript">
+        var position=document.documentElement;
+        position.addEventListener("mousemove", e =>{
+            position.style.setProperty('--x', e.clientX + "px");
+        })
+    </script>
+</body>
+</html>

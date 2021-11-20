@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Parallax</title>
+    <link rel="stylesheet" href="css/parallax.css">
+</head>
+<body>
+    <section>
+    <img src="imagens/bg.jpg" alt="imagem 1" id="bg">
+    <img src="imagens/moon.png" alt="imagem 2" id="moon">
+    <img src="imagens/mountain.png" alt="imagem 3" id="montain">
+    <img src="imagens/road.png" alt="imagem 4" id="road">
+    <h2 id="text">Moon Light</h2>
+    </section>
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let montain = document.getElementById("montain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll',function(){
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            montain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = -value * -1 + 'px';
+            text.style.opacity = -value +'px';
+        })
+    </script>
+</body>
+</html>
